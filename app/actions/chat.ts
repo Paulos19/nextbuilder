@@ -2,9 +2,6 @@
 
 import { auth } from "@/auth"
 
-// Permite que esta Server Action rode por até 60 segundos (útil se fizer deploy na Vercel Pro/Hobby com ajustes)
-export const maxDuration = 60; 
-
 export async function sendMessageToAgent(formData: FormData) {
   // 1. Validação de Segurança: Apenas usuários logados podem acionar o agente
   const session = await auth()

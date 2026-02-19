@@ -1,6 +1,8 @@
 import { auth } from "@/auth"
 import { redirect } from "next/navigation"
 
+export const maxDuration = 60; 
+
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   const session = await auth()
 
